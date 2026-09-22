@@ -20,13 +20,13 @@ while True:
     opcion = input("Seleccione una opción: ")
 
     if opcion == "1":
-        registrar_items()
+        registrar_item(inventario)
 
     elif opcion == "2":
-        listar_items()
+        listar_items(inventario)
 
     elif opcion == "3":
-        print("Buscar ítem")
+        buscar_item(inventario)
 
     elif opcion == "4":
         print("Registrar préstamo")
