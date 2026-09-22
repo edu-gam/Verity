@@ -2,5 +2,8 @@
 
 #cambio en el main
 import json
-from archivo import *
+from funciones import *
+
+registrar_items()
+listar_items()
 

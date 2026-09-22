@@ -1,6 +1,6 @@
 import json
 #registra los items
-def registrar():
+def registrar_items():
     print(f"Registrar un item:\n")
     codigo = input("Ingrese el codigo del item:")
     titulo = input("Ingrese el titulo:")
