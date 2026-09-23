@@ -1,0 +1,11 @@
+[
+    {
+        "codigo": "Lab-004",
+        "titulo": "larry",
+        "autor": "larry",
+        "categoria": "larry",
+        "cantidad_total": 3,
+        "cantidad_disponible": 3,
+        "ubicacion": "Estante 44"
+    }
+]
