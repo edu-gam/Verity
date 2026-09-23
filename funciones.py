@@ -1,21 +1,113 @@
 import json
+
+def cargar_inventario():
+    try:
+        with open("inventario.json", "r") as archivo:
+            return json.load(archivo)
+    except FileNotFoundError:
+        return []
+
+
+def guardar_inventario(inventario):
+    with open("inventario.json", "w") as archivo:
+        json.dump(inventario, archivo, indent=4)
+
+
+def registrar_item(inventario):
+    codigo = input("Ingrese el código del ítem: ")
+    titulo = input("Ingrese el título: ")
+    autor = input("Ingrese el autor: ")
+    categoria = input("Ingrese la categoría: ")
+    cantidad = int(input("Ingrese la cantidad total: "))
+    ubicacion = input("Ingrese la ubicación: ")
+
+    item = {
+        "codigo": codigo,
+        "titulo": titulo,
+        "autor": autor,
+        "categoria": categoria,
+        "cantidad_total": cantidad,
+        "cantidad_disponible": cantidad,
+        "ubicacion": ubicacion
+    }
+
+    inventario.append(item)
+    guardar_inventario(inventario)
+
+    print("Ítem registrado exitosamente.")
+
+
+inventario = cargar_inventario()
+
+def cargar_inventario():
+    try:
+        with open("inventario.json", "r") as archivo:
+            return json.load(archivo)
+    except FileNotFoundError:
+        return []
+
+
+def guardar_inventario(inventario):
+    with open("inventario.json", "w") as archivo:
+        json.dump(inventario, archivo, indent=4)
+
+
+def registrar_item(inventario):
+    codigo = input("Ingrese el código del ítem: ")
+    titulo = input("Ingrese el título: ")
+    autor = input("Ingrese el autor: ")
+    categoria = input("Ingrese la categoría: ")
+    cantidad = int(input("Ingrese la cantidad total: "))
+    ubicacion = input("Ingrese la ubicación: ")
+
+    item = {
+        "codigo": codigo,
+        "titulo": titulo,
+        "autor": autor,
+        "categoria": categoria,
+        "cantidad_total": cantidad,
+        "cantidad_disponible": cantidad,
+        "ubicacion": ubicacion
+    }
+
+    inventario.append(item)
+    guardar_inventario(inventario)
+
+    print("Ítem registrado exitosamente.")
+
+
+inventario = cargar_inventario()
+
 #registra los items
-def registrar_items():
-    print(f"Registrar un item:\n")
-    codigo = input("Ingrese el codigo del item:")
-    titulo = input("Ingrese el titulo:")
-    autor = input("Ingrese el autor:")
-    categoria = input("Ingrese la categoria:")
-    cantidad = int(input("Ingrese la cantidad total:"))
-    ubicacion = input("Ingrese la ubicacion:")
+
+def registrar_item(inventario):
+    codigo = input("Ingrese el código del ítem: ")
+    titulo = input("Ingrese el título: ")
+    autor = input("Ingrese el autor: ")
+    categoria = input("Ingrese la categoría: ")
+    cantidad = int(input("Ingrese la cantidad total: "))
+    ubicacion = input("Ingrese la ubicación: ")
+
+    item = {
+        "codigo": codigo,
+        "titulo": titulo,
+        "autor": autor,
+        "categoria": categoria,
+        "cantidad_total": cantidad,
+        "cantidad_disponible": cantidad,
+        "ubicacion": ubicacion
+    }
+
+    print("Ítem registrado exitosamente.")
+    print(item)
 
 
 
 #parte de sebas
 #lista los items
-def listar_items():
+def listar_items(inventario):
     try:
-        with open("inventario.json", "r", encoding="utf-8") as archivo:
+        with open("archivo.json", "r", encoding="utf-8") as archivo:
             inventario = json.load(archivo)
     except FileNotFoundError:
         print("\nNo existe el archivo de inventario.")
@@ -29,7 +121,7 @@ def listar_items():
         return
 
     print("\n==========================================")
-    print("           LISTA DE ÍTEMS")
+    print("             LISTA DE ÍTEMS")
     print("==========================================")
 
     for item in inventario:
