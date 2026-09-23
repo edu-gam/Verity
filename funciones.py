@@ -1,5 +1,6 @@
 import json
 
+
 def cargar_inventario():
     try:
         with open("inventario.json", "r") as archivo:
@@ -83,6 +84,8 @@ def listar_items(inventario):
         print(f"Ubicación: {item['ubicacion']}")
         print("------------------------------------------")
 
+
+# Busca los items
 def buscar_item(inventario):
     busqueda = input("Ingrese el código del item: ")
     busqueda2 = input("Ingrese el título del ítem: ")
@@ -99,3 +102,7 @@ def buscar_item(inventario):
             return
 
     print("No se encontró ningún ítem.")
+
+
+# Carga el inventario al iniciar
+inventario = cargar_inventario()
