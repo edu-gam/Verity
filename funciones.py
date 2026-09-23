@@ -84,10 +84,11 @@ def listar_items(inventario):
         print("------------------------------------------")
 
 def buscar_item(inventario):
-    busqueda = input("Ingrese el código o título del ítem: ")
+    busqueda = input("Ingrese el código del item: ")
+    busqueda2 = input("Ingrese el título del ítem: ")
 
     for item in inventario:
-        if item["codigo"] == busqueda and item["titulo"].lower() == busqueda.lower():
+        if item["codigo"] == busqueda and item["titulo"].lower() == busqueda2.lower():
             print("Ítem encontrado:")
             print("Código:", item["codigo"])
             print("Título:", item["titulo"])
