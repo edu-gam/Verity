@@ -29,10 +29,10 @@ while True:
         buscar_item(inventario)
 
     elif opcion == "4":
-        print("Registrar préstamo")
+        registrar_prestamo(inventario, prestamos)
 
     elif opcion == "5":
-        print("Registrar devolución")
+       registrar_devolucion(inventario, prestamos)
 
     elif opcion == "6":
         print("Saliendo del programa...")

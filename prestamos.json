@@ -1,0 +1,10 @@
+[
+    {
+        "codigo_item": "Lab-004",
+        "titulo_item": "larry",
+        "usuario": "Larry",
+        "fecha_prestamo": "2026-09-22 22:38:25",
+        "estado": "Devuelto",
+        "fecha_devolucion": "2026-09-22 22:38:48"
+    }
+]
