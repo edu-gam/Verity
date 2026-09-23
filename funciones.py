@@ -56,7 +56,7 @@ inventario = cargar_inventario()
 #lista los items
 def listar_items(inventario):
     try:
-        with open("archivo.json", "r", encoding="utf-8") as archivo:
+        with open("inventario.json", "r", encoding="utf-8") as archivo:
             inventario = json.load(archivo)
     except FileNotFoundError:
         print("\nNo existe el archivo de inventario.")
@@ -87,7 +87,7 @@ def buscar_item(inventario):
     busqueda = input("Ingrese el código o título del ítem: ")
 
     for item in inventario:
-        if item["codigo"] == busqueda or item["titulo"].lower() == busqueda.lower():
+        if item["codigo"] == busqueda and item["titulo"].lower() == busqueda.lower():
             print("Ítem encontrado:")
             print("Código:", item["codigo"])
             print("Título:", item["titulo"])
